@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1>Learning about JavaScript Loops</h1>
+		<p id="date"> </p>
+		<p id="demo"> </p>
+		<script>
+			const realEstate = {
+				agent: "Jimmy",
+				agency: "Swami India Limited",
+				locations: ["East Legon", "Dodowa", "Achimota Forest", "Techiman", "Madina", "Sraha"],
+				EastLegon: {type:"apartment", color:"rose-gold", sizeInFeet:1000},
+				Dodowa: {type:"apartment", color:"royal blue", sizeInFeet:3000},
+				Techiman: {type:"mansion", color:"crimson", sizeInFeet:6000}
+			};
+			
+			let x = document.getElementById("demo");
+			let y = document.getElementById("date");
+			
+			
+			y.innerHTML = "<h3>" + realEstate.agency + "</h3>" + "Our agent is " + realEstate.agent;
+			
+			let list = "";
+			let add = "";
+			
+			/* for (let z in realEstate.locations) {
+				list += realEstate.locations[z] + 12 + "<br>";
+				if (z == 2) {
+					break;
+				}
+				add += realEstate.locations[z] + 200 + "<br>";
+			} */
+			
+			for (z=0; z<7; z++) {
+				
+				list += realEstate.locations[z] + "<br>";
+				if ( z === 2 ||  z === 3 || z === 4) {
+					continue;
+				}
+				add += realEstate.locations[z] + 200 + "<br>";
+			}
+			
+			
+			y.innerHTML = list;
+			//x.innerHTML = add;
+			
+			
+		</script>
+	</body>
+</html>

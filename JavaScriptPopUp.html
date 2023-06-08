@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript BOM</title>
+	</head>
+
+	<body>
+		<p id="demo"> </p>
+		<p id="demolo"> </p>
+		<p id="demi"> </p>
+		<button id="test" onclick="OpenDoc()">Empty</button>
+		<script>
+			//Testing the PopUp Objects
+			let w = document.getElementById("test");
+			let x = document.getElementById("demo");
+			let y = document.getElementById("demolo");
+			let z = document.getElementById("demi");
+			
+			alert("Yoyo Whatup?\nThis is to tell you something about yourself today");
+			if(confirm("Press a button!")) {
+				txt = "You pressed OK!";
+			} else {
+				txt = "You pressed Cancel!";
+		    }
+			
+			x.innerHTML = txt;
+			
+			let car = prompt("Enter Your Car Model:");
+			let text;
+			
+			if (car==null||car=="") {
+				text = "User cancelled prompt";
+				car;
+			} else {
+				if (car.length < 3) {
+					text = "Is that even a car?";
+				} else {
+					text = "Hello " + car + "! How are you today?";
+				}
+			}
+			
+			y.innerHTML = text;
+		</script>
+	</body>
+
+</html>

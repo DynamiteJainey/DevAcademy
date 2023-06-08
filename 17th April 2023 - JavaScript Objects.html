@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1>Learning about JavaScript Objects</h1>
+		<h3>Creating a JavaScript Objects</h3>
+		<p>Using an Object Literal</p>
+		<p>This is the easiest way to create a JavaScript Object. 
+		Using an object literal, you both define and create an object 
+		in one statement.</p>
+		<p>const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</p>
+		<br>
+		<p>Using the JavaScript Keyword new</p>
+		<p>You can create a new JavaScript object using new Object()</p>
+		<p>const person = new Object();
+		   person.firstName = "John";
+		   person.lastName = "Doe";
+		   person.age = 50;
+		   person.eyeColor = "blue";</p>
+	    <br>
+		
+		<p id="demo"> </p>
+		<script>
+			const Months = new Object();
+			
+			function Person(date){
+				this.myAge = date;
+				if (date == 20){
+					this.myAge = "45years old";
+				}
+			}
+			
+			//const Pers = new Person(12, 2023, 1997);
+			const Pers = new Person(20);
+			x = "myDay";
+			// document.getElementById("demo").innerHTML = Pers.myAge;
+			// document.getElementById("demo").innerHTML = Pers["myAge"];
+			document.getElementById("demo").innerHTML = Pers[x];
+			
+			
+			const person = {
+				fname:"John",
+				lname:"Smith",
+				age:25,
+				month:90
+			};
+			
+			person.fname = "Gilbert";
+			delete person["fname"];
+			
+			
+			document.getElementById("demo").innerHTML = person.fname;
+			
+			Months.birthday = "October";
+			Months.salary = "June";
+			Months.age = 30;
+			Months.car = true;
+			
+			//document.getElementById("demo").innerHTML = Months.car;
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

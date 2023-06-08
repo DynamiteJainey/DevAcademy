@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Class</title>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			
+			class Estate {
+				constructor(houseNo, location, name) {
+					this.houseNumber = houseNo;
+					this.location = location;
+					this.name = name;
+				}
+				calcAge() {
+					let date = new Date();
+					let age = date.getFullYear();
+					return age;
+				}
+			}
+			
+			const AmenEstate = new Estate(348, "Lagos", "Amarachi");
+			const SalemEstate = new Estate(20, "Adjiringanor", "Kwabena");
+			
+			let result = Object.values(AmenEstate);
+			
+			x.innerHTML = result;
+			y.innerHTML = AmenEstate.calcAge();
+			
+			class Building extends Estate{
+				constructor(houseNo, location, name, type) {
+					super(houseNo, location, name);
+					this.type = type;
+				}
+				print() {
+					return "YAH man";
+				}
+				
+				printOUT() {
+					return "man";
+				}
+			}
+			
+			const Trassaco = new Building(23, "Trassaco", "Kwashieman", "apartments");
+			
+			let display = JSON.stringify(Trassaco);
+			
+			y.innerHTML = display;
+			z.innerHTML = Trassaco.calcAge();
+			
+			class Mansion extends Building {
+				constructor(houseNo, location, name, type, nationality) {
+					super(houseNo, location, name, type);
+					this.nationality = nationality;
+				}
+			}
+			
+			const ValleyView = new Mansion(99, "ValleyView", "University", "School", "Ghana");
+			
+			let display2 = JSON.stringify(ValleyView);
+			
+			y.innerHTML = display2;
+			z.innerHTML = ValleyView.calcAge();
+		</script>
+	</body>
+
+</html>

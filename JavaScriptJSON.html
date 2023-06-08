@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JavaScript Number</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<p id="text"></p>
+		<p id="test"></p>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("text");
+			let z = document.getElementById("test");
+			
+			const obj = {name: "Jane", age: 30, eyeColor: "brown"};
+			
+			var json = '{"name":"Jane", "age":30, "eyeColor":"brown"}';
+			var json2 = '["chale", 230, "Tessa"]';
+			
+			x.innerHTML = typeof obj;
+			y.innerHTML = typeof json;
+			z.innerHTML = typeof json2;
+			
+			let view = JSON.parse(json);
+			let view2 = JSON.parse(json2);
+			
+			x.innerHTML = view.age;
+			y.innerHTML = json2[0];
+			z.innerHTML = view2[0];
+			
+			var data = '{"staff":[{"id": 1,"fname": "Aaron"},{"id": 2,"fname": "Mabel"}],"manager":[{"id": 10,"fname": "Abel"},{"id": 12,"fname": "Label"}]}';
+			
+			x.innerHTML = data;
+			
+			let convert = JSON.parse(data);
+			
+			y.innerHTML = convert.manager[1].fname;
+			
+			var dated = 'new Date()';
+			
+			x.innerHTML = dated;
+			
+			let display = JSON.parse(dated);
+			
+			y.innerHTML = display;
+		</script>
+	</body>
+</html>

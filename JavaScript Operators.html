@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+		<h2>My First JavaScript</h2>
+
+		<script>
+			//arithmetic operators
+			// addition operator +
+			let x = 10;
+			let y = 6;
+			let z = x + y;
+			document.write("the value of z is: ");
+			document.write(z);
+			z = (4*x + 2*y); // -- doing a little bit of algebra
+			document.write("the value of z is: ");
+			document.write(z);
+
+			// subtraction operator -
+			let x1 = 10;
+			let y1 = 6;
+			let z1 = x1 - y1;
+			document.write("the value of z1 is: ");
+			document.write(z1);
+
+
+			// multiplication operator *
+			let x2 = 10;
+			let y2 = 6;
+			let z2 = x2 * y2;
+			document.write("the value of z2 is: ");
+			document.write(z2);
+
+
+			// division operator /
+			let x3 = 10;
+			let y3 = 6;
+			let z3 = x3 / y3;
+			document.write("the value of z3 is: ");
+			document.write(z3);
+
+
+			// modulus operator % - returns remainder
+			let x4 = 10;
+			let y4 = 6;
+			let z4 = x4 % y4;
+			document.write("the value of z4 is: ");
+			document.write(z4);
+
+
+			// increment operator ++
+			let p = 10;
+			++p; // p = p + 1
+			document.write("the value of p is: ");
+			document.write(p);
+
+
+			// decrement operator --
+			let p1 = 10;
+			--p1; // p1 = p1 - 1
+			document.write("the value of p1 is: ");
+			document.write(p1);
+
+
+
+
+
+
+			//comparison operators
+			// equal to comparison operator ==
+			let s = (10 == 10);
+			document.write("the value of s is: ");
+			document.write(s);
+
+			let s1 = (2 == 10);
+			document.write("the value of s1 is: ");
+			document.write(s1);
+
+
+			// not equal to comparison operator !=
+			let t = (10 != 10);
+			document.write("the value of t is: ");
+			document.write(t);
+
+			let t1 = (2 != 10);
+			document.write("the value of t1 is: ");
+			document.write(t1);
+
+
+			// greater than comparison operator >
+			let d = (10 > 10);
+			document.write("the value of d is: ");
+			document.write(d);
+
+			let d1 = (20 > 10);
+			document.write("the value of d1 is: ");
+			document.write(d1);
+
+
+			// less than comparison operator >
+			let e = (1 < 10);
+			document.write("the value of e is: ");
+			document.write(e);
+
+			let e1 = (20 < 10);
+			document.write("the value of e1 is: ");
+			document.write(e1);
+
+
+			// greater than or equal to comparison operator >
+			let f = (1 >= 10);
+			document.write("the value of f is: ");
+			document.write(f);
+
+			let f1 = (20 >= 10);
+			document.write("the value of f1 is: ");
+			document.write(f1);
+
+
+			// less than or equal to comparison operator >
+			let g = (1 <= 10);
+			document.write("the value of g is: ");
+			document.write(g);
+
+			let g1 = (20 <= 10);
+			document.write("the value of g1 is: ");
+			document.write(g1);
+
+
+
+
+
+			//logical operators
+			// AND &&
+			//number datatype - returns largest non-zero value OR returns 0
+			let c = (2 && 2);
+			document.write("the value of c is: ");
+			document.write(c);
+			//use case under boolean
+			c = (false && false);
+			document.write("the value of c is: ");
+			document.write(c);
+			//use case under string - returns largest binary value or biggest length
+			c = ("a" && "abcd");
+			document.write("the value of c is: ");
+			document.write(c);
+
+
+			// OR ||
+			//number datatype - returns the non-zero value
+			let h = (0 || 2);
+			document.write("the value of h is: ");
+			document.write(h);
+			//use case under boolean - returns true value
+			h = (true || false);
+			document.write("the value of h is: ");
+			document.write(h);
+			//use case under string - returns what?
+			h = ("a" || "abcd");
+			document.write("the value of h is: ");
+			document.write(h);
+
+
+			// NOT !
+			//number datatype - returns true for zero
+			let j = !(2); // let j = (!2);
+			document.write("the value of j is: ");
+			document.write(j);
+			//use case under boolean - returns opposite
+			j = (!false);
+			document.write("the value of j is: ");
+			document.write(j);
+			//use case under string - returns true for empty strings
+			j = (!"abcd");
+			document.write("the value of j is: ");
+			document.write(j);
+
+
+
+
+
+			//asignment operators
+			let u = 10;
+
+			u += 4;
+			document.write("the value of u is: ");)
+			document.write(u);
+
+			u -= 4;
+			document.write("the value of u1 is: ");
+			document.write(u);
+
+			u *= 4;
+			document.write("the value of u2 is: ");
+			document.write(u);
+
+			u /= 4;
+			document.write("the value of u3 is: ");
+			document.write(u);
+
+
+			//ternary operators
+			let l = (2 < 4) ? "it is true":"it is false";
+			document.write("the value of l is: ");
+			document.write(l);
+		</script>
+
+		<p id="demo"></p>
+
+	</body>
+</html> 

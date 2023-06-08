@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1>Learning about JavaScript Objects</h1>
+		
+		<p id="demo"> </p>
+		<script>
+			const Months = new Object();
+			
+			function Person(date){
+				this.myAge = date;
+				if (date == 20){
+					this.myAge = "45years old";
+				}
+			}
+			
+			//const Pers = new Person(12, 2023, 1997);
+			const Pers = new Person(20);
+			x = "myDay";
+			// document.getElementById("demo").innerHTML = Pers.myAge;
+			// document.getElementById("demo").innerHTML = Pers["myAge"];
+			document.getElementById("demo").innerHTML = Pers[x];
+			
+			
+			const myPresido = {
+				biography:{
+				fname:"John",
+				lname:"Smith",
+				age:25
+				}
+			};
+			
+			document.getElementById("demo").innerHTML = myPresido.biography.fname;
+			
+			const mainCompany = {
+				name:"Almanac Incorporation",
+				age:23,
+				built:2000,
+				product:[
+				{type:"cars", name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+				{type:"shoes", name:"Nike", models:["Retro", "AirForce", "XXX"]}
+				]
+			}
+			
+			/* This will not work
+			document.getElementById("demo").innerHTML = mainCompany.product.[0]; */
+			
+			let x = "";
+			for (let i in mainCompany.product) {
+				x += "<h2>" + mainCompany.product[i].name + "</h2>";
+				
+			}
+			
+			document.getElementById("demo").innerHTML = x;
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			const Company = {
+				name:"Almanac Incorporation",
+				age:23,
+				built:2000,
+				productType1:"cars",
+				carName:"Ford",
+				carModel1:"Fiesta",
+				carModel2:"Focus",
+				carModel3:"Mustang",
+				productType2:"shoes",
+				shoeName:"Nike",
+				shoeModel1:"Fiesta",
+				shoeModel2:"Focus",
+				shoeModel3:"Mustang",
+			};
+			
+			
+			
+		</script>
+	</body>
+</html>

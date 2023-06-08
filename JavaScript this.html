@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript this keyword</title>
+	</head>
+
+	<body id="body" onmouseover="">
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<button onclick="this.style.backgroundColor='black';">LOOK AT ME</button>
+		<script>
+			//"use strict";
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			
+			//this.location.assign("https://google.com/");
+			//this.open("", "_blank");
+			//window.open("", "_blank");
+			
+			function func() {
+				//return this.open("", "_blank");   // referring to window object
+			}
+			
+			function change(){
+				document.getElementById("body").style.backgroundColor='black';
+			}
+			try {
+			const girl = {
+				name: "Ann",
+				age: 12,
+				married: false,
+				fullName: function () {return this.married;},
+				details: function (name, age, city, country) {
+				return this.name + " " + this.age+ "," + city + "," + country;}
+			}
+			const boy1 = {
+				name: "Kweku",
+				age: 30
+			}
+			
+			const boy2 = {
+				name: "Daniel",
+				age: 35
+			}
+			
+			x.innerHTML = girl.fullName();  // girl.married
+			y.innerHTML = girl.details();
+			y.innerHTML = girl.details.call(boy1);
+			z.innerHTML = girl.details.bind(boy1)();
+			
+			
+			z.innerHTML = girl.details.apply(boy1, ["NY", "USA"]);
+			
+			} catch(err) {
+				document.write(err.message);
+			}
+		</script>
+	</body>
+
+</html>

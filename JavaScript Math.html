@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JavaScript Math</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<p id="text"></p>
+		<p id="demi"></p>
+		<p id="test"></p>
+
+		<script>
+			let w = document.getElementById("demo");
+			let x = document.getElementById("text");
+			let y = document.getElementById("demi");
+			let z = document.getElementById("test");
+			
+			// Math Properties (Constants)
+			x.innerHTML = Math.PI; // returns PI
+			y.innerHTML = Math.SQRT2; // returns the square root of 2
+			z.innerHTML = Math.SQRT1_2; // returns the square root of 1/2
+			w.innerHTML = Math.E;  // returns Euler's number
+			
+			w.innerHTML = Math.LN2; // returns natural logarithm of 2
+			x.innerHTML = Math.LN10; // returns natural logarithm of 10
+			y.innerHTML = Math.LOG2E; // returns base of 2 logarithm of E
+			z.innerHTML = Math.LOG10E; // returns base of 10 logarithm of E
+			
+			
+			// Math Methods   Math.method(number)
+			// Number to an Integer
+			w.innerHTML = Math.round(-1.7);  // rounds the number to the nearest whole number or Integer
+			x.innerHTML = Math.ceil(-1.7);   // always round up
+			y.innerHTML = Math.floor(-1.9);  // always rounds down
+			z.innerHTML = Math.trunc(-0.5);   // returns whole number and leaves decimal
+			
+			//Check numbers
+			w.innerHTML = Math.sign(-22);  // returns -1 if number is negative
+			x.innerHTML = Math.sign(0);  // returns 0 if number is null
+			y.innerHTML = Math.sign(400); // returns 1 if number is positive
+			
+			//Create Random numbers
+			let a = Math.random();   // generates random number between 0 and 1 ( 1 not inclusive)
+			let b = a * 101;
+			let c = Math.round(b);
+			//y.innerHTML = Math.round(Math.random() * 11);
+			
+			x.innerHTML = a;
+			y.innerHTML = b;
+			z.innerHTML = c
+			
+			// the function below always returns a random number
+			// between the min and max (both included)
+			function getRandom(min, max) {
+				return Math.round(Math.random() * (max - min + 1));
+			}
+			
+			w.innerHTML = getRandom(1, 10);
+			x.innerHTML = getRandom(1, 20);
+			y.innerHTML = getRandom(100, 200);
+			z.innerHTML = getRandom(1, 2000);
+			
+			// Raised to the Power
+			// SYNTAX => Math.pow(x, y)  returns the values of x to the power of y
+			w.innerHTML = Math.pow(2, 3);
+			
+			// Find square root
+			x.innerHTML = Math.sqrt(64); // returns the square root of the number
+			
+			// Make positive
+			y.innerHTML = Math.abs(-0.8); // returns positive or absolute value of number
+			
+			let d = -10;
+			let e = 12/d;
+			
+			z.innerHTML = Math.abs(e);
+			
+			// Sine and Cosine Methods
+			//w.innerHTML = Math.cos(0 * Math.PI/180);
+			
+			// Max and Min Methods
+			w.innerHTML = Math.min(0, 150, 30 -8, -200);
+			x.innerHTML = Math.max(0, 150, 30 -8, -200);
+			
+			
+			// find cube root
+			y.innerHTML = Math.cbrt(810);
+		</script>
+	</body>
+</html>

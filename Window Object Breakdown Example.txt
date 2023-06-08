@@ -1,0 +1,25 @@
+window = {
+	open: funtion ();
+	close: funtion ();
+	resize:
+	move:
+	location: {
+		href:
+		assign: function();
+		hostname:
+		
+		
+		
+	navigator:
+	
+	history: {
+		back:
+		forward:
+		}
+	screen: {
+		width:
+		height:
+		
+	confirm:
+	alert:
+	prompt:

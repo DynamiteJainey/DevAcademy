@@ -1,0 +1,19 @@
+Return statements, in programming languages, are used to skip the currently executing function and return to the caller function. Return statements may/may not return any value. Below is the example of a return statement in JavaScript.
+
+Example 1:
+// The return statement returns
+// the product of 'a' and 'b'
+function myFunction(a, b) {
+  return a * b;   
+}
+
+
+Example 2: Similarly, we can return true or false in a simple JavaScript function.
+function isEqual(num1, num2) {
+    if (num1 == num2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+These were some of the basic implementations of return false statement in JavaScript. However, there exist some more interesting implementations. Web Developers use ‘return false’ in different ways. During form submission, if a particular entry is unfilled, return false is used to prevent the submission of the form.

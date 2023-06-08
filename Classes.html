@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Class</title>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<h1>New User Form</h1>
+		<input id="user" type="text" placeholder="enter your fullname"><br>
+		<input id="age" type="text" placeholder="enter your age"><br>
+		<input id="email" type="text" placeholder="enter your email"><br>
+		<input type="submit" value="Save" onclick="display()">
+		<input type="submit" value="Next" onclick="newPage()">
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			let username = document.getElementById("user");
+			let userAge = document.getElementById("age");
+			let userEmail = document.getElementById("email");
+			
+			function display() {
+				class Data {
+					constructor(name, age, email){
+						this.name = name;
+						this.age = age;
+						this.email = email;
+					}
+				}
+				
+				let user = username.value;
+				let uAge = userAge.value;
+				let uEmail = userEmail.value;
+				
+				const userList = new Data(user, uAge, uEmail);
+				
+				//z.innerHTML = "Welcome " + userList.name;
+				
+				y.innerHTML = JSON.stringify(userList);
+				
+			}
+			
+			function newPage() {
+				window.open("welcome.html", "_blank");
+			}
+		</script>
+	</body>
+
+</html>

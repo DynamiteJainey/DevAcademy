@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript BOM</title>
+	</head>
+
+	<body>
+		<p id="demo"> </p>
+		<p id="demolo"> </p>
+		<p id="demi"> </p>
+		<button id="diplay" onclick="Timer1 = setTimeout(User, 3000); Timer2 = setTimeout(Input, 5000);">Display</button>
+		<button id="stop" onclick="clearTimeout(Timer1); clearTimeout(Timer2);">Stop</button>
+		
+		<button id="check" onclick="interval = setInterval(Datime, 3000);">Check DateTime</button>
+		<button id="check" onclick="clearInterval(interval);">Stop Checking</button>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("demolo");
+			let z = document.getElementById("demi");
+			let w = document.getElementById("test");
+			
+			function User() {
+				x.innerHTML = "This is what I'm taking about!";
+				x.style.backgroundColor = "pink";
+			}
+			
+			function Input() {
+				alert("Hello Everyone!\nLet's get to know each other better");
+			}
+			
+			function Datime() {
+				let c = new Date();
+				const opt = {weekday: "long", day: "numeric", month: "long", year: "numeric"};
+				x.innerHTML = c;
+				
+				// displays just the date from date object in the format dd/mm/yyyy
+				//y.innerHTML = c.toLocaleDateString();
+				
+				// displays date in language set and according to format set in the opt object
+				y.innerHTML = c.toLocaleDateString("en-EN", opt); 
+				
+				// displays time section of the date object in AM and PM
+				z.innerHTML = c.toLocaleTimeString(); 
+				
+				// displays time section of the date object in format of local timezone of the country
+				// z.innerHTML = c.toLocaleTimeString("it-IT");
+				
+			}
+		</script>
+	</body>
+
+</html>

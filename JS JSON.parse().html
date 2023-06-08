@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JavaScript JSON.parse()</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<p id="text"></p>
+		<p id="test"></p>
+
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("text");
+			let z = document.getElementById("test");
+			
+			const obj = {name: "Carlos", age: 73, eyeColor: "brown"};
+			x.innerHTML = obj.name;
+			y.innerHTML = obj;
+			z.innerHTML = JSON.stringify(obj);
+			
+			// '{"name": "Carlos", "age": 73, "eyeColor": "brown"}'
+			
+			var object = '{"name":"Jane", "age":73, "eyeColor":"blue"}';
+			
+			let view = object;
+			let view2 = JSON.parse(object);
+			
+			x.innerHTML = typeof view;
+			y.innerHTML = typeof view2;
+			z.innerHTML = view2.age;
+		</script>
+	</body>
+</html>

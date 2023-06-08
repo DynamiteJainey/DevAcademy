@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1 id="test">JavaScript Objects</h1>
+		<p id="demo" >Hello</p>
+		<p id="year" >Hello</p>
+		
+		<script>
+			const myBrother = {
+				name:"Alex", 
+				age:24, 
+				surname:"Smith", 
+				fullname:function(){return this.name + " " + this.surname;},
+				HolaSenore:function() {return this.age + 20;}
+			}
+
+			
+			function calculate() {
+				return myBrother.age + 20;
+			}
+			
+			let x = new Date();
+			
+			document.getElementById("demo").innerHTML = myBrother.fullname();
+			document.getElementById("year").innerHTML = x.getFullYear();
+		</script>
+	</body>
+</html>

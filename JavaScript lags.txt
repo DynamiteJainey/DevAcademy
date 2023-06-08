@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Flags</title>
+		<link rel="stylesheet" href="CalcStyle.css">
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<script>
+			let array = [1, 2, 3, 4, 5, 3, 4, 2];
+			
+			for (item of array){
+				if (item == 3) {
+					let display = document.getElementById("demo").innerHTML;
+					display += "+++++" + "<br>";
+				}
+			}
+		</script>
+	</body>
+
+</html>

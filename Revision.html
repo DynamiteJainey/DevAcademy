@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1>JavaScript Revision</h1>
+		<p style="font-weight:bold">Using the Date Object</p>
+		<p>Please input your date of birth below:</p>
+		<input id="dateInput" type="text" placeholder="YYYY-MM-DD">
+		<input type="submit" onclick="AgeCalc()" value="Calculate Age">
+		
+		<p id="demo"></p>
+		
+		<script>
+			function AgeCalc() {
+				let systemDate = new Date();
+				let x = document.getElementById("dateInput").value;
+				const birthdate = new Date(x);
+				const y = birthdate.getFullYear();
+				const z = birthdate.getMonth();
+				const u = birthdate.getUTC();
+				const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+				
+				document.getElementById("demo").innerHTML = u;
+			}
+		</script>
+	</body>
+</html>

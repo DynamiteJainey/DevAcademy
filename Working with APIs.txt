@@ -1,0 +1,5 @@
+Working with APIs
+When working with remote APIs, you need a way to interact with those APIs. Modern JavaScript provides two native ways to send HTTP requests to remote servers, XMLHttpRequest and Fetch.
+
+
+

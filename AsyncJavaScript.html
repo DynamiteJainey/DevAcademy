@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Async JavaScript Tutorial</title>
+	</head>
+
+	<body id="body" onmouseover="">
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<button onclick="this.style.backgroundColor='black';">LOOK AT ME</button>
+		<script>
+			//"use strict";
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			
+			// Rest Parameters
+			function myBio (first, ...otherInfo) {
+				//x.innerHTML = first + " " + last;
+				x.innerHTML = first;
+				return otherInfo;
+			}
+			
+			y.innerHTML = myBio("Harry", "Styles", 123, 24, "Yo", true);
+			//z.innerHTML = myBio("Aaron", "Brown");
+			
+			
+			// Arrow Functions at Work
+			const a = 4;
+			const b = 2;
+			let you = (a, b) => a + b + 100;
+			
+			let you2 = function (a, b) {
+				return a + b + 100;
+			};
+			
+			function you3(a, b) {
+				return a + b + 100;
+			}
+			
+			x.innerHTML = you(a, b);
+			y.innerHTML = you2(a, b);
+			z.innerHTML = you3(a, b);
+			
+			
+			// Ice Cream Shop Tutorial
+			const stocks = {
+				fruits: ["Strawberry", "Grapes", "Banana", "Apple"],
+				liquid: ["Water", "Ice"],
+				holder: ["Cone", "Cup", "Stick"],
+				toppings: ["Chocolate", "Sprinkles", "Oreo"]
+			}
+			
+			let order = (fruit_name, call_production) => {
+				setTimeout(function(){
+					document.write(`${stocks.fruits[fruit_name]} was selected`);
+				
+					call_production();    // production();
+					
+					setTimeout(()=>{
+						document.write(`Serve ${stocks.fruits[fruit_name]} and ${stocks.toppings[2]} ice cream`);
+					}, 11000)
+				}, 2000)
+			};
+			
+			let production = () => {
+				setTimeout(()=>{
+					document.write("<br> Production has started");
+					
+					setTimeout(()=>{
+						document.write("<br> Fruits has been chopped <br>");
+					}, 3000)
+					
+					setTimeout(()=>{
+						document.write(`${stocks.liquid[0]} and ${stocks.liquid[1]} added`);
+					}, 4000)
+					
+					setTimeout(()=>{
+						document.write("<br> Machine started <br>");
+					}, 5000)
+					
+					setTimeout(()=>{
+						document.write(`Ice cream placed on ${stocks.holder[1]} <br>`);
+					}, 7000)
+					
+					setTimeout(()=>{
+						document.write(`${stocks.toppings[2]} added as toppings <br>`);
+					}, 8000)
+					
+					
+				}, 1000)
+			};
+			
+			order(2, production);
+		</script>
+	</body>
+
+</html>

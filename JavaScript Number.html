@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JavaScript Number</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<p id="text"></p>
+		<p id="test"></p>
+		<button onclick="getInfinity()">Start</button>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("text");
+			let z = document.getElementById("test");
+			
+			let add = 0.2 + 0.1;
+			x.innerHTML = add;
+			
+			let add2 = (0.2 * 10 + 0.1 * 10)/10;
+			y.innerHTML = add2;
+			
+			let a = 10;
+			let b = "20";
+			let c = 30;
+			let d = "40";
+			
+			x.innerHTML = a + c;
+			y.innerHTML = a / "Yello";
+			z.innerHTML = a / b;
+			let txt = "";
+			
+			function getInfinity() {
+				let num = 2;
+				while (num != Infinity) {
+					num = num * num;
+					txt = txt + num + "<br>";
+					y.innerHTML = txt;
+				}
+			}
+			
+			let sum = 12/0;
+			z.innerHTML = sum;
+			
+			let str = "123.98";
+			let numb = Number.parseInt(str);
+			let numb2 = Number.parseFloat(str);
+			
+			x.innerHTML = typeof str;
+			y.innerHTML = typeof numb;
+			//x.innerHTML = numb;
+			//y.innerHTML = numb2;
+		</script>
+	</body>
+</html>

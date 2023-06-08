@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Async JavaScript Tutorial</title>
+	</head>
+
+	<body id="body" onmouseover="">
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<button onclick="open()">Open Shop</button>
+		<script>
+			//"use strict";
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			
+			// Ice Cream Shop Tutorial
+			const stocks = {
+				fruits: ["Strawberry", "Grapes", "Banana", "Apple"],
+				liquid: ["Water", "Ice"],
+				holder: ["Cone", "Cup", "Stick"],
+				toppings: ["Chocolate", "Sprinkles", "Oreo"]
+			}
+			
+			let is_shop_open = true;
+			
+			let order = ( time, work ) => {
+			  return new Promise( (resolve, reject)=>{
+				if( is_shop_open ){
+				  setTimeout(()=>{
+				   // work is 👇 getting done here
+					resolve( work() )
+			// Setting 👇 time here for 1 work
+				   }, time)
+				}
+				else{
+				  reject( document.write("<br> Our shop is closed") )
+				}
+			  })
+			}
+			
+			order(2000, ()=>document.write("We are open now"))
+			
+			.then(()=>{
+				return order(2000, ()=>{document.write("<br> Please Select Your Order <br>");});
+			})
+			
+			.then(()=>{
+				return order(1000, ()=>{
+				document.write(`${stocks.fruits[0]} was selected`);});
+			})
+			
+			.then(()=>{
+				return order(1000, ()=>{document.write("<br> Production has started");});
+			})
+			
+			.then(()=>{
+				return order(2000, ()=>{document.write("<br> Fruits has been chopped <br>");});
+			})
+			
+			.then(()=>{
+				return order(1000, ()=>{document.write(`${stocks.liquid[0]} and ${stocks.liquid[1]} added`);});
+			})
+			
+			.then(()=>{
+				return order(1000, ()=>{document.write("<br> Machine started <br>");});
+			})
+			
+			.then(()=>{
+				return order(2000, ()=>{document.write(`Ice cream placed on ${stocks.holder[1]} <br>`);});
+			})
+			
+			.then(()=>{
+				return order(3000, ()=>{document.write(`${stocks.toppings[2]} added as toppings <br>`);});
+			})
+			
+			.then(()=>{
+				return order(2000, ()=>{document.write(`Serve ice cream`);});
+			})
+			
+			.catch(()=> { document.write("<br> Customer has left"); document.write("<br> Oh how sad!");})
+			
+			.finally(()=> { document.write("<br> Close of Day");});
+		</script>
+	</body>
+
+</html>

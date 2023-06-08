@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Arrays</title>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			
+			// What is an Array?
+			// An array is a special variable that can hold more than one value
+			// SYNTAX => const array_name = [item1, item2, ...];
+			
+			// Creating an Array Using Literal
+			const array1 = [
+			1190, 
+			20, 
+			100, 
+			4, 
+			500, 
+			260]; // six items, max-index of 5
+			array1[6] = 567;
+			
+			
+			// Creating Array Using the new KeyWord
+			const array2 = new Array(); // array2 = [];
+			array2[0] = "Mason";
+			array2[1] = 23;
+			
+			// Using the Array Constructor
+			const array3 = new Array(12,34,"Carl", "Amanda"); 
+			// array3 = [12, 34, "Carl", "Amanda"];
+			
+			// Accessing my Array
+			x.innerHTML = array1;
+			
+			let text = "";
+			for (let a in array1) {
+				text += array1[a] + ", ";
+				y.innerHTML = text;
+			}
+			
+			// Array Values Can Be objects or functions
+			const array4 = new Array();
+			//const array4 = new Array(new Date(), myFunction());
+			array4[0] = new Date("1999-09-12");
+			array4[1] = myFunction();
+			z.innerHTML = array4;
+			function myFunction() {
+				let a = 123;
+				let b = 10;
+				let sum = a * b;
+				return sum;
+			}
+			
+			x.innerHTML = array4[0].getFullYear();
+			
+			// Array Methods and Properties
+			// Length Property
+			z.innerHTML = array1.length;
+			
+			// Sort Method  => sorts elements alphabetically (strings), sorts numbers from lowest to highest using first digit
+			const array5 = ["Willie", "Becka", "Zebidiah", "Aaron"];
+			array5[4] = "Henry";
+			array5[5] = "Chris";
+			x.innerHTML = array5.sort();
+			
+			// Reverse Method => reverses the index order of elements
+			y.innerHTML = array5.reverse();
+			
+			// Concat Method
+			x.innerHTML = array5.concat(array1);
+			
+			// copyWithin Method 
+			// SYNTAX array.copyWithin(target, start, end)
+			x.innerHTML = array1;
+			y.innerHTML = array1.copyWithin(6, 0, 2);
+			z.innerHTML = array1;
+			
+			// Array.from Method
+			z.innerHTML = Array.from("Ama is a Girl");
+			x.innerHTML = Array.from("INSOSOPHYSICALMENTITILIZATION");
+			
+			// join Method
+			x.innerHTML = array5.join(" = ");
+			y.innerHTML = array5;
+			
+			// Array.isArray Method
+			const obj = {"property":234};
+			let str = "word";
+			z.innerHTML = Array.isArray(array1);
+			
+			// push Method
+			x.innerHTML = array5.push("Kiwi", 123, "Apple");
+			y.innerHTML = array5;
+			
+			const numbers = [1000, 2, 3, 5, 60];
+			x.innerHTML = numbers;
+			y.innerHTML = numbers.splice(1, 0, "Men", "Guy", 600);
+			z.innerHTML = numbers;
+			/*function reduction(zeroIndex, sumOfAll) {
+				return zeroIndex - sumOfAll;
+			}
+			z.innerHTML = numbers.reduce(reduction); */
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+
+<body>
+	<h1>JavaScript Objects</h1>
+	<h2>Calling Objects Using the Object Literal</h2>
+	<p>const pers = {firstname:"John", age:12, address:"Legon"};</p>
+	
+	<p id="demo1"></p>
+	
+	<p>Calling Objects Using JavaScript Object Constructor</p>
+	
+	<p id="demo2"></p>
+	<script>
+		// Object Literal
+		const pers = {firstname:"John", age:12, address:"Legon"};	
+		
+		document.getElementById("demo1").innerHTML = "This person's name is " + pers.firstname;
+		
+		// Constructor function for Person objects
+		function Person(firstname, lastname, age, eyeColor, car) {
+			this.firstName = firstname;
+			this.lastName = lastname;
+			this.age = age;
+			this.eyeColor = eyeColor;
+			this.carBrand = car;
+		}
+		
+		const User1 = new Person("John", "Smith", 45, "brown");
+		const mySister = new Person("Judy", "Chisom", 22, "blue", "Mercedes");
+		
+		// myBrother = {firstName:"John", lastName:"Smith", age:45, eyeColor:"brown"}
+		
+		document.getElementById("demo2").innerHTML = "My sister's name is " + mySister.carBrand;
+	</script>
+</body>
+
+</html>

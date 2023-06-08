@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JavaScript RegExp</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<p id="text"></p>
+		<p id="test"></p>
+
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("text");
+			let z = document.getElementById("test");
+			
+			let text = "orwld He9llo dwwwwoooorrr WORLD, \u231B mywor naworme is \u231B world AWESOME";
+			let t = text.match(/world/g);
+			
+			let str = "Amanda\n Ama is coming home\nAma is today\nis yesterday";
+			x.innerHTML = text;
+			
+			t =  str.match(/ama/i);
+			//y.innerHTML = t;
+			
+			// t = text.match(/[wo]/g);
+			
+			t = text.match(/(t|o|9)/g);
+			y.innerHTML = t
+			let a = text.match(/[t|o|,]/ig);
+			z.innerHTML = a;
+			
+			let b = text.match(/\d/g);
+			y.innerHTML = b;
+			
+			let c = text.match(/\s/g);
+			z.innerHTML = c;
+			
+			let d = text.match(/\bwor/g);
+			let de = text.match(/wor\b/g);
+			y.innerHTML = d;
+			z.innerHTML = de;
+			
+			let f = text.match(/\u231B/g);
+			y.innerHTML = f;
+			
+			let find = text.match(/wor/ig);
+			let find2 = text.match(/w+o+r+/ig);
+			let find3 = text.match(/wor*/ig);
+			y.innerHTML = find3;
+			z.innerHTML = find2;
+			
+			let str2 = "Abcd";
+			const pattern = /e/g;
+			x.innerHTML = pattern.test(str2);
+			y.innerHTML = pattern.exec(str);
+			
+			let u = pattern.exec(str);
+			z.innerHTML = typeof u;
+		</script>
+	</body>
+</html>

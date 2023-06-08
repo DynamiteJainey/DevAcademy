@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript BOM</title>
+	</head>
+
+	<body>
+		<p id="demo">This is just to test the window object</p>
+		<button id="test" onclick="HistoryBack()">Go Back</button>
+		<script>
+			//Testing the Window object
+			let w = document.getElementById("test");
+			let x = document.getElementById("demo");
+			
+			function newDoc() {
+				//window.close();
+				location.assign("BOM part2.html");
+			}
+			
+			function HistoryBack() {
+				window.history.back();
+			}
+		</script>
+	</body>
+
+</html>

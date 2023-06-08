@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+
+<body>
+	<h1>JavaScript Dates</h1>
+	<h2>Using the new Date() constructor</h2>
+	<p>Create a new date object with the current date and time:</p>
+	
+	<p id="demo"></p>
+	
+	<p id="test"></p>
+	
+	<p id="haha"></p>
+	<script>
+		// const monthNames = "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November" "December";
+		const ourDays = ["Monday", "Tuesday", "Wednesday", "thursday", "friday", "saturday", "sunday"];
+		
+		const fullDate = new Date();
+		const year = fullDate.getFullYear();
+		const month = monthNames[fullDate.getMonth()];
+		const weekday = ourDays[fullDate.getDay()];
+		// const date = ;
+		
+		document.getElementById("demo").innerHTML = fullDate;
+		// document.getElementById("test").innerHTML = ;
+		
+		const myDate = new Date("1992-09-21");
+		// const myMonth = ;
+		const myYear = myDate.getFullYear();
+		
+		document.getElementById("haha").innerHTML = myYear;
+		
+		
+		const ourDate = new Date("1892-10-07");
+		//let ourMonth = monthNames[];
+		
+		document.getElementById("haha").innerHTML = ourMonth;
+		
+	</script>
+</body>
+
+</html>

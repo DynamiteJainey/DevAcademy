@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1>Learning about JavaScript Objects</h1>
+		
+		<p id="demo"> </p>
+		<script>
+			const mainCompany = {
+				name:"Almanac Incorporation",
+				age:23,
+				built:2000,
+				product:[
+				{type:"cars", name:"Ford", models:["Fiesta", "Focus", "Mustang", "Retro"]},
+				{type:"shoes", name:"Nike", models:["Retro", "AirForce", "XXX"]},
+				{type:"bread", name:"sugar", models:["Retro", "AirForce", "XXX"]}
+				]
+			}
+			
+			/* This will not work
+			document.getElementById("demo").innerHTML = mainCompany.product.[0]; */
+			
+			let products = "";
+			for (let num in mainCompany.product) {
+				// x = "Almanac Inc has the following products:";
+				//delete mainCompany.product[1];
+				products += "<br>" + mainCompany.product[num].type + "<br>";
+				products += mainCompany.product[num].name + "<br>";
+				for (let j in mainCompany.product[num].models) {
+					products += "<p>" + mainCompany.product[num].models[j] + "</p>";
+				}
+			}
+			
+			document.getElementById("demo").innerHTML = products;
+	
+		</script>
+	</body>
+</html>

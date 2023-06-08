@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JavaScript OOPs</title>
+	</head>
+	<body>
+		<h1>JavaScript OOPs</h1>
+		
+		<p id="demo" style="color:red"></p>
+		<p id="text"></p>
+		<p id="test"></p>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("text");
+			let z = document.getElementById("test");
+			
+			// JavaScript Interpolation
+			/* document.write("Hello World!       <br>");
+			let fame = "Just do it TODAY and be free";
+			let val = 123;
+			let val = `This number is ${val}`;
+			document.write(`Nike's slogan is ${val}`);
+			document.write("Nike's slogan is " + val); */
+			
+			// Polymorphism 
+			class first {
+				add(){
+					x.innerHTML = "Hello There";
+				}
+			}
+			
+			class second {
+				add(){
+					x.innerHTML = "Hello There";
+					y.innerHTML = 1000 * 2;
+				}
+			}
+			
+			class third {
+				add(){
+					x.innerHTML = "Hello There";
+					y.innerHTML = 1000 * 2;
+					z.innerHTML = "Ah ah.. You're not gone?";
+				}
+			}
+			
+			let obj = new first();
+			let obj2 = new second();
+			let obj3 = new third();
+			
+			obj.add();
+			obj2.add();
+			obj3.add();
+			
+			// Function Polymorphism and Inheritance
+			class Alpha {
+				area(num1, num2) {
+					document.write(num1 * num2);
+				}
+			}
+			
+			class Omega extends Alpha{
+				area(a, b) {
+					super.area(a, b);
+					document.write("This is the end <br>");
+				}
+			}
+			
+			let object = new Omega();
+			let object2 = new Alpha();
+			let output = object.area(4, 5);
+			let output2 = object2.area(4, 5);
+			
+			// in summary, Polymorphism is like inheritance but without any relationship between classes;
+			
+			class A {
+				constructor(){
+					var name;
+					var age;
+				}
+				//setter method - set object properties -- write only access
+				setProperty(name, age){
+					this.name = name;
+					this.age = age;
+				}
+				// getter method - get object properties  -- read only access
+				getProperty(){
+					return (this.age + this.name);
+				}
+				getName(){
+					return this.name;
+				}
+				getAge(){
+					return this.age;
+				}
+			}
+			
+			//let stud1 = new A("James", 23);
+			
+			const stud1 = new A();   // const stud1 = {name: "", age=}
+			//stud1.setName("Anna");
+			
+			stud1.setProperty("Anna", 70);
+			x.innerHTML = stud1.getAge();
+			
+			//y.innerHTML = stud1.age;
+		</script>
+	</body>
+</html>

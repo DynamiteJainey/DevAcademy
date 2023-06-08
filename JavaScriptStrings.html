@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Strings</title>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<script>
+			let text = "Sammy";
+			let car = 'Hello';
+			let empty = "";
+			
+			let answer = "It's alright";
+			let x = document.getElementById("demo");
+			let z = document.getElementById("dart");
+			
+			// Length Property
+			let len = answer.length;
+			x.innerHTML = text.length;
+			
+			// Backslash Escape Character \
+			let describe = "We are the \"Vikings\" from the south.";
+			x.innerHTML = describe;
+			
+			// Backspace Escape Character \b
+			let names = "Jaime, Ralph, \b Ann";
+			x.innerHTML = names;
+			
+			// Form Feed Escape Character \f
+			let numbers = "123\f456\f78\f91011";
+			x.innerHTML = numbers;
+			
+			// New Line Escape Character \n
+			let main = "This is t cat\nThis is a mouse!";
+			x.innerHTML = main;
+			
+			// Carriage Return Escape Character \r
+			let rad = "Ama is a G\rHere";
+			x.innerHTML = rad;
+			
+			// Horizontal & Vertical Tabulator \t \v
+			let ray = "Hello World!";
+			x.innerHTML = ray;
+			
+			let c = "It's \u231B for \u26BD";  // c is an string   // to add unique symbols you can use \u[hex value of symbol]
+			x.innerHTML = typeof c;
+			let y = new String("John is a John boya with Johnany"); // y is an object containing a string
+			z.innerHTML = typeof y;
+			
+			x.innerHTML = (c == y);  // LooseEquality
+			z.innerHTML = (c === y); // StrictEquality
+			
+			// String Methods and Properties
+			
+			x.innerHTML = main.charAt(16); // shows character at specified index
+			z.innerHTML = c.concat(" " + y + " " + ray); // returns two or more joined Strings
+			
+			x.innerHTML = c.endsWith("hn"); // returns true of false if string ends with specified value
+			z.innerHTML = ray.includes("t", "a"); // checks if string contains any of the specified values and returns true if at least one is found
+			
+			x.innerHTML = y.indexOf("a"); // shows index of first occurence of specified value
+			z.innerHTML = y.lastIndexOf("a");
+			
+			x.innerHTML = ray.length; // shows how many characters are in the String
+			
+			z.innerHTML = c.charCodeAt(0);
+			
+			x.innerHTML = c;
+			z.innerHTML = y.match("Joh");
+			
+			z.innerHTML = y.split("a");
+			let newString = y.slice(2, 7);
+			z.innerHTML = newString;
+		</script>
+	</body>
+
+</html>

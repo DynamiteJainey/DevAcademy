@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1>Learning about JavaScript Objects</h1>
+		
+		<p id="demo"> </p>
+		<script>
+			const Schools = {
+				students:2000,
+				shs:[
+				{type:"Girls SHS", names:["Aburi Girls", "Wesley Girls", "Archbishop Potter Girls"]},
+				{type:"Boys SHS", names:["Presec", "Tema Technical", "Adisadel"]},
+				{type:"Mixed SHS", names:["Ghana National", "West African Senior High"]}
+				],
+				jhs:[
+				{type:"Boys SHS", names:["Presec", "Tema Technical", "Adisadel"]},
+				{type:"Mixed SHS", names:["Ghana National", "West African Senior High"]}
+				]
+				// shs:[1, 2, 3, 4]
+			};
+			
+			let list = "";
+			for (let i in Schools.jhs){
+				list += "<h3>" + Schools.jhs[i].type + "</h3>";
+				list += Schools.jhs[i].names + "<br>";
+				for (let j in Schools.jhs[i].names){
+					list += "<p style=margin:30px;color:white;background-color:red;text-align:center;>" + Schools.jhs[i].names[j] + "</p>";
+				}
+			}
+			let x = [1, 2, "3m", 4];
+			let y = 1;
+			document.getElementById("demo").innerHTML = list;
+			document.getElementById("demo").innerHTML = Schools["names"][0]["shs"];
+			// document.getElementById("demo").innerHTML = Schools.jhs[0].type.toLowerCase();
+			// document.getElementById("demo").innerHTML = list.toUpperCase();
+			
+		</script>
+	</body>
+</html>

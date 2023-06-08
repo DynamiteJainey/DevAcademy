@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Class</title>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			
+			function Person(name, age, salary) {
+				this.name = name;
+				this.age = age;
+				this.eyeColor = function () {
+					let x = "brown";
+					return x;
+				}
+				this.salary = salary;
+			}
+			
+			const newGuy = new Person("James Bond", 24, 2500);
+			
+			
+			function Person2(name, age, salary, location) {
+				this.name = name;
+				this.age = age;
+				this.eyeColor = function () {
+					let x = "brown";
+					return x;
+				}
+				this.salary = salary;
+				this.location = location;
+			}
+			
+			const newGirl = new Person2("Anna", 23, 1900, "Prampram");
+			
+			let obj1 = JSON.stringify(newGuy);
+			let obj2 = JSON.stringify(newGirl);
+			
+			x.innerHTML = obj1;
+			y.innerHTML = obj2;
+			
+			class Human {
+				constructor(name, age, salary) {
+						this.name = name;
+						this.age = age;
+						this.salary = salary;
+				}
+				eyeColor() {
+					let t = "yellow";
+					return t;
+				}
+				// static methods belong only to parent classes and their children
+				// objects cannot access them
+				static calculate() {
+					let a = 50 * 100;
+					return a;
+				}
+			}
+			
+			const Guy = new Human("Annaias", 13, 20);
+			
+			class Girl extends Human {
+				constructor(name, age, salary, location){
+					super(name, age, salary);
+					this.location = location;
+				}
+			}
+			
+			const Female = new Girl("Jane", 23, 0, "Prampram");
+			
+			let obj3 = JSON.stringify(Guy);
+			let obj4 = JSON.stringify(Female);
+			y.innerHTML = obj3;
+			z.innerHTML = Female.eyeColor();
+			
+			//y.innerHTML = obj3;
+			//z.innerHTML = obj4;
+			
+			// x.innerHTML = Girl.calculate();
+			
+			const example = {
+				name: "Carl",
+				age: 50,
+				food: function () {return "Indomie"}
+			}
+			let disp = JSON.stringify(example);
+			y.innerHTML = example.food();
+		</script>
+	</body>
+
+</html>

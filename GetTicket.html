@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JavaScript Math</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<input id="email" type="email" placeholder="Enter Your Email">
+		<button onclick="Code()">Get Code</button>
+		<p id="demo"></p>
+		<script>
+			let w = document.getElementById("demo");
+			let x = document.getElementById("email");
+			
+			function Code() {
+				let emailID = x.value;
+				if (!(emailID == "")) {
+					let code = Math.round(Math.random() * 10001);
+					let code2 = Math.round(Math.random() * 101);
+					w.innerHTML = "Your Code is: " + "#BD" + code + "XC" + code2;
+				} else {
+					w.innerHTML = "Please enter your email address";
+				}
+			}
+			
+		</script>
+	</body>
+</html>

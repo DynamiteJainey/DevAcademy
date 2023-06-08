@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Boolean</title>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			
+			// JavaScript booleans can have one of two values = true or false
+			
+			// the Boolean() function
+			x.innerHTML = Boolean(!("12" == 123));
+			y.innerHTML = (123 == 123);
+			
+			let a = -20.9;
+			let b = -0;
+			let c = "12324";
+			let d = null;
+			let e;
+			let f = true;
+			let g = 10 / "Hello"; // NAN
+			z.innerHTML = Boolean(g);
+			
+			// Defining Booleans
+			let bool = true;  // using boolean literal
+			let bool2 = new Boolean(true);   // DO NOT USE THIS WAY
+			
+			x.innerHTML = typeof bool;
+			y.innerHTML = typeof bool2;
+			
+			x.innerHTML = (bool == bool2);
+			y.innerHTML = (bool === bool2);
+			
+			z.innerHTML = bool.constructor;
+			z.innerHTML = typeof bool.toString();
+			z.innerHTML = typeof bool.valueOf();
+			
+			function Person(name, age, car) {
+				this.name = name;
+				this.age = age;
+				this.car = car;
+			}
+			Person.prototype.language = "German";
+			Person.prototype.calcSalary = function calc() {let a = 1 + 2; return a;};
+			const obj = new Person("Jane", 40, "Benz");
+			const newPerson = new Person("Ama", 40, "BMW");
+			
+			let result = Object.values(newPerson);
+			x.innerHTML = newPerson.calcSalary();
+			y.innerHTML = obj.calcSalary();
+		</script>
+	</body>
+
+</html>

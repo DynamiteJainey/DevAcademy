@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Async JavaScript Tutorial</title>
+	</head>
+
+	<body id="body" onmouseover="">
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<button onclick="open()">Open Shop</button>
+		<script>
+			//"use strict";
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			
+			// Ice Cream Shop Tutorial
+			const stocks = {
+				fruits: ["Strawberry", "Grapes", "Banana", "Apple"],
+				liquid: ["Water", "Ice"],
+				holder: ["Cone", "Cup", "Stick"],
+				toppings: ["Chocolate", "Sprinkles", "Oreo"]
+			}
+			
+			let is_shop_open = true;
+			
+			function topping_choice() {
+				return new Promise( (resolve, reject) => {
+					setTimeout(()=> {
+						resolve( document.write("TP = What toppings do you want? <br>"))
+					}, 6000)
+				})
+			}
+			
+			async function toppings() {
+					setTimeout(()=> {
+						document.write("T = What toppings do you want? <br>")
+						document.write("T = You have chosen OREO. <br>")
+					}, 3000)
+					
+					await topping_choice()
+					
+					document.write("T = Hello");
+			}
+			
+			async function kitchen() {
+				document.write("Welcome to Our Kitchen <br>")
+				document.write("How May We Help You? <br>")
+				document.write("Make a Toppings Choice: <br>")
+				
+				//await topping_choice()
+				await toppings()
+				
+				document.write("<br>Choice has been made. <br>")
+			}
+			
+			kitchen();
+			document.write("<br> washing dishes");
+			document.write("<br> arranging plates");
+			document.write("<br> cooking food");
+			//toppings();
+		</script>
+	</body>
+
+</html>

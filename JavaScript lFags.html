@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Flags</title>
+		<link rel="stylesheet" href="CalcStyle.css">
+	</head>
+	
+	<body>
+		<p id="demo"></p>
+		<script>
+			let array = [1, 2, 4, 5, 4, 2, 3, 3, 3,3,3,3 ,3 ];
+			
+			let YahMan = ["a", "b", "c", "d", "e"];
+			let flag = 0;
+			
+			for (let element of YahMan){
+				if (element == "c") {
+					flag = 1;
+					break;
+				}
+			}
+			
+			if (flag === 1) {
+				document.write("This is an intact array");
+			} else {document.write("--");}
+		</script>
+	</body>
+
+</html>

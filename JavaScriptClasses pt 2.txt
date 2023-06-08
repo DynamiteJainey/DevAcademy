@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Class</title>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<p id="dart"></p>
+		<p id="deer"></p>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("dart");
+			let z = document.getElementById("deer");
+			
+			function Person(name, age, salary) {
+				this.name = name;
+				this.age = age;
+				this.eyeColor = function () {
+					let x = "brown";
+					return x;
+				}
+				this.salary = salary;
+			}
+			
+			const newGuy = new Person("James Bond", 24, 2500);
+			
+			
+			function Person2(name, age, salary, location) {
+				this.name = name;
+				this.age = age;
+				this.eyeColor = function () {
+					let x = "brown";
+					return x;
+				}
+				this.salary = salary;
+				this.location = location;
+			}
+			
+			const newGirl = new Person2("Anna", 23, 1900, "Prampram");
+			
+			let obj1 = JSON.stringify(newGuy);
+			let obj2 = JSON.stringify(newGirl);
+			
+			x.innerHTML = obj1;
+			y.innerHTML = obj2;
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Cookies</title>
+	</head>
+
+	<body onload="intro()">
+		<input type="button" value="Set Cookie" onclick="SetCookie()">
+		<input type="button" value="Get Cookie" onclick="GetCookie()">
+		<script>
+			function intro() {
+				prompt("Enter Your Name");
+			}
+			function SetCookie() {
+				document.cookie="username=Duke Martin";
+				document.cookie=" ";
+				
+				//document.cookie="username= ";
+			}
+			
+			function GetCookie() {
+				if (document.cookie.length!=0) {
+					alert(document.cookie);
+					let c = "Are I, Your friend is calling you, now";
+					c.split(",");
+					var array = document.cookie.split("=");
+					// array = ["username", "Duke Martin", "email", "aa@aa.com", "userid_consent", 1223333]
+					alert("First Item= "+array[0]+" "+array[1]+";Next Item="+array[2]+" "+array[3]);
+				} else {
+					alert("Cookie not available");
+				}
+			}
+			
+			
+			document.write(navigator.javaEnabled());
+		</script>
+	</body>
+
+</html>

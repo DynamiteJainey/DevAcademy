@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript BOM</title>
+	</head>
+
+	<body>
+		<p id="demo"> </p>
+		<p id="demolo"> </p>
+		<button id="test" onclick="openWindow()">OPEN!</button>
+		<button id="test" onclick="closeWindow()">CLOSE!</button>
+		<button id="test" onclick="moveWindow()">MOVE!</button>
+		<button id="test" onclick="resizeWindow()">RESIZE!"</button>
+		<script>
+			//Testing the Window object
+			document.getElementById("demo").innerHTML = window.outerWidth + "px. " + window.outerHeight;
+			let w = document.getElementById("test");
+			
+			function openWindow(){
+				NewWin = window.open("", "", "width=300, height=2000");
+				// blank opens in new tab; self opens in same tab;
+				File = window.open("./test/CallingObjects2.html", "_blank");
+			}
+			
+			function closeWindow(){
+				NewWin.close(); 
+				//closes blank window that was opened with window.open
+				File.close();
+			}
+			
+			function moveWindow() {
+				NewWin.moveTo(100, 100);
+			}
+			
+			function resizeWindow() {
+				NewWin.resizeTo(2000, 800);
+			}
+			
+			// Testing the Screen object
+			let x = document.getElementById("demolo");
+			
+			x.innerHTML = screen.height + "<br>" + screen.availHeight;
+			//x.innerHTML = screen.pixelDepth;
+		</script>
+	</body>
+
+</html>

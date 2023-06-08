@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+
+<body>
+	<h1>Playing with JavaScript Dates</h1>
+	<h2>Mini-Project</h2>
+	<p>Find a way to receive someone's date of birth and use the input to calculate their age in years, months, days, hours, and minutes.</p>
+	
+	<p id="demo"></p>
+	
+	<p id="test"></p>
+	
+	<p id="haha"></p>
+	
+	<input id="yearborn" type="text" placeholder="format YYYY-MM-DD">
+	<button id="submit" type="Submit" onclick=calculateAge()>Calculate</button>
+	
+	<p id="age"></p>
+	<p id="day-old"></p>
+	<p id="hours-old"></p>
+	<p id="minutes-old"></p>
+	<script>
+		// const ms1970 = Date.now(); 
+		
+		function calculateAge() {
+			let x = document.getElementById("yearborn").value;
+			
+			const birthdate = new Date(x);
+			const today = new Date();
+			
+			// calculate age based on years
+			const years = today.getFullYear() - birthdate.getFullYear();
+			const months = today.getMonth();
+			const days = today.getDate();
+			document.getElementById("age").innerHTML = "You are " + years + " years, " + months + " months, " + days + " days old.";
+			
+			
+			// calculate age based on days
+			const day = (years * 365) + (months * 30) + (days);
+			document.getElementById("day-old").innerHTML = "You are " + day + " days old.";
+			
+			// calculate age based on hours
+			const hour = day * 24;
+			document.getElementById("hours-old").innerHTML = "You are " + hour + " hours old.";
+			
+			// calculate age based on minutes
+			const minute = hour * 60;
+			document.getElementById("minutes-old").innerHTML = "You are " + minute + " minutes old.";
+		}
+		// 
+		
+		const mydate = new Date("1999-02-07");
+		const age = 2039 - mydate.getFullYear();
+		
+	
+		/* const mydate = new Date();
+		const ms1970 = mydate.getTime(); */
+		
+		
+		
+		document.getElementById("demo").innerHTML = ms1970;
+		
+		//document.getElementById("test").innerHTML = years;
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1>Learning about JavaScript Loops</h1>
+		<p id="date"> </p>
+		<p id="demo"> </p>
+		<script>
+			// for loop, while loop, do-while loop, for-in loop
+			
+			// 1. for loop
+			/* The JavaScript for loop iterates the elements (or runs the code)
+			for the fixed number of times. It should be used if number of 
+			iteration is known. 
+			
+			SYNTAX
+			for (initialization; condition; increment)
+			{
+				code to be executed;
+			} */
+			
+			for (x = 0; x < 2; x++){
+				const Person = {name:"John", age:24};
+				const Number = [1, 2, 3, 4, 5];
+				for (let x in Number){
+					//document.write(Number[x] + "<br>");
+				}
+			}
+			
+			// 2. while loop
+			/* The JavaScript while loop iterates the elements (or runs the code)
+			for an infinite number of times. It should be used if the number of
+			iterations is unknown.
+			SYNTAX
+			while (condition)
+			{
+				code to be executed;
+			} */
+			
+			var i = 902;
+			while (i<=901) 
+			{
+				//document.write(i + "<br>");
+				i += 1000;
+			}
+			
+			// 3. do while loop
+			/* The JavaScript do while loop iterates the elements (or runs the code) for
+			an infinite number of times JUST LIKE the while loop. BUT the code is executed
+			at least once regardless of whether the condition is true or false.
+			SYNTAX
+			do {
+				code to be executed;
+			} while (condition);     */
+			
+			var c = 21;
+			
+			do {
+				//document.write(c + "<br>");
+				c++;
+			} while (c <=20);
+			
+			// 4. for in loop
+			/* This loop is used to iterate or display the properties of an object or array.
+			SYNTAX
+			for (variable in object)
+			{
+				statement;
+			}    */
+			
+			const Schools = {
+				students:2000,
+				jhs:[
+				{type:"Boys SHS", names:["Presec", "Tema Technical", "Adisadel"]},
+				{type:"Mixed SHS", names:["Ghana National", "West African Senior High"]}
+				]
+			};
+			
+			let list = "";
+			for (let i in Schools.jhs){
+				list += "<h3>" + Schools.jhs[i].type + "</h3>";
+				list += Schools.jhs[i].names + "<br>";
+			}
+			
+			//document.getElementById("demo").innerHTML = list;
+			
+			// 5. for of loop
+			/* This is a loop that operates on a sequence of values from an object 
+			or array.
+			SYNTAX
+			for (variable of iterable)
+			{
+				statement;
+			}    */
+			
+			/* iterable - this refers to the source of the sequence of values on which
+			the loop operates on.  */
+			
+			const array1 = ["a", "b", 12, 30, "c"];
+			
+			for (const element of array1) {
+				//document.write(element);
+			}
+			
+			//document.write("<br>" + array1);
+			
+			// break and continue statements
+			/* The break statement jumps out of a loop. the continue statements skips
+			one iteration of a loop  */
+			
+			for (d = 0; d <= 5; d++) {
+				let e = 0;
+				if (d == 0 || e == 4) {
+					//document.write("Finito");
+					continue;
+				}
+				document.write("The value is " + d + "<br>");
+				e += 2;
+			}
+			
+			var e = 1;
+			while (e<10)
+			{
+				//document.write("<br>" + e + "<br>");
+				if (e == 5) {
+					break;
+				}
+				e++;
+			}
+		</script>
+	</body>
+</html>

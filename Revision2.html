@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>JavaScript Functions</title>
+		
+	</head>
+	<body>
+		<p id="demo">Hello All. See Some Magic.</p>
+		
+		<input id="numb" type="text" onkeyup="validate()" onmouseover="invalidate()" required>
+		<button type="" onclick="newFunction()">Click Me</button>
+		<br>
+		<p id="loop" style="font-size:8px; color:red;"></p>
+		
+		<script>
+			let x = 0;
+		   function newFunction(){
+				x ++;
+				let y = document.getElementById("demo");
+				let loop = document.getElementById("loop");
+				let calc = document.getElementById("numb").value;
+				y.innerHTML = "You have clicked the button " + x + " times";
+				y.style.color = "red";
+				y.style.nbackgroundColor = "yellow";
+				let z = 15;
+				let list = "";
+				while (z < 30){
+					list += z;
+					loop.innerHTML = list; 
+					z++;
+				}
+				function calculator(number){
+					let t = document.getElementById("numb").value;
+					return t;
+				}
+				
+				//document.write(calculator(calc));
+				loop.innerHTML = calculator();
+		   }
+		   function validate() {
+				var msg;
+				if (document.getElementById("numb").value < 5) {
+						msg = "Try a bigger number";
+						loop.innerText = msg;
+				} else {
+					msg = "Good choice";
+					loop.innerText = msg;
+				}
+			}
+			
+			function invalidate() {
+				document.getElementById("numb").placeholder = "Oya write a number";
+			}
+		</script>
+	</body>
+</html>

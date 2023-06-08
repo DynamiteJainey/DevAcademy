@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+
+		<p id="demo">Click the button to change the layout of this paragraph</p>
+
+		<div id="slider">This is a slider</div>
+
+		<img src="https://img.freepik.com/free-photo/moon-light-shine-through-window-into-islamic-mosque-interior_1217-2597.jpg?w=1380&t=st=1680773840~exp=1680774440~hmac=8532761169a4dc56f419eef9ffbfd5be28bea5ec78fd9df1bd05ef0793b19b91" alt="window-scene" id="window" style="width:400px; height:200px;">
+		<br>
+		<a href="https://google.com/" target="_blank" id="link">Go to Google</a>
+
+		<button onclick="myFunction()">Click Me!</button>
+
+		<script>
+			function myFunction() {
+				let x = document.getElementById("demo");
+				x.style.fontSize = "15px"; 
+				x.style.color = "red"; 
+				x.style.marginBottom = "20px";
+				  
+				// variable.attribute.property
+				  
+				let y = document.getElementById("slider");
+				y.style.fontSize = "12px";
+				y.style.backgroundColor = "aliceblue";
+				y.style.textAlign = "center";
+				y.style.borderRadius = "50px";
+				y.style.fontFamily = "sans-serif";
+				  
+				let z = document.getElementById("window");
+				z.style.width = "200px";
+				z.src = "https://img.freepik.com/free-photo/high-angle-woman-arranging-meal-table_23-2150154527.jpg?w=1380&t=st=1680774037~exp=1680774637~hmac=c440bb4b66f6bcf8885378e9da5a663fe0c64dcf4a0e342ca0fe071b9145142f";
+				
+				var w = document.getElementById("link");
+				w.href = "https://youtube.com/";
+			}
+		</script>
+
+	</body>
+</html>

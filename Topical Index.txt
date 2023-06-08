@@ -1,0 +1,41 @@
+Things Covered So Far
+
+JavaScript DataTypes (number, boolean, string, big int, null, undefined, object)
+
+JavaScript HTML DOM
+document.getElementById
+document.getElementsByClassName
+document.getElementsByTagName
+.innerHTML - changes content of element
+.innerText
+
+JavaScript Form Validation
+document.forms()
+various form attributes (action, name,)
+
+JavaScript Objects
+Define (literals, constructor, Object.create(), 
+Display (dot notation, square notation, using loops, Object.values(), JSON.stringify(),)
+Properties (add, update, display, delete)
+Nested Objects and How to Access Them
+the Date Object (new Date(), set date, getFullYear, getDate, getMinutes, etc)
+
+JavaScript Arrays
+Define (literals,)
+Display (index notation)
+
+Type Conversion (how to convert from one datatype to another)
+Implicit typecasting 
+Explicit typecasting ( toString(), toBoolean(),)
+
+
+JavaScript Loops
+For Loop
+For in Loop
+For of Loop
+While Loop
+Do while Loop
+Break
+Continue statements
+
+JavaScript Functions (syntax, usage, return statement, arguments, nested functions)

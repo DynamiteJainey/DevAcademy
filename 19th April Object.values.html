@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1>Learning about JavaScript Objects</h1>
+		<p id="date"> </p>
+		<br><br><br>
+		<p id="demo"> </p>
+		
+		<p id="example"> </p>
+		
+		<p id="string"> </p>
+		
+		<p id="norm-string"> </p>
+		<script>
+			const Schools = {
+				students:2000,
+				shs:[
+				{type:"Girls SHS", names:["Aburi Girls", "Wesley Girls", "Archbishop Potter Girls"]},
+				{type:"Boys SHS", names:["Presec", "Tema Technical", "Adisadel"]},
+				{type:"Mixed SHS", names:["Ghana National", "West African Senior High"]}
+				],
+				jhs:[
+				{type:"Boys SHS", names:["Presec", "Tema Technical", "Adisadel"]},
+				{type:"Mixed SHS", names:["Ghana National", "West African Senior High"]}
+				]
+			};
+			
+			const Person = {
+				name:"Jaime",
+				surname:"Pinkrah",
+				subject:"JavaScript",
+				married:false,
+				cars:12
+			};
+			
+			const Array = Object.values(Schools);
+			document.getElementById("demo").innerHTML = "<h3> This is how nested objects display with Object.values()</h3>" + Array + "<br>";
+			
+			const SecondArray = Object.values(Person);
+			document.getElementById("example").innerHTML = "<h3> This is how normal objects display with Object.values()</h3>" + SecondArray + "<br>";
+			//document.getElementById("example").innerHTML = Person.name + " has a surname, which is " + SecondArray[1];
+			
+			let newString = JSON.stringify(Schools, null, 100);
+			let newPerson = JSON.stringify(Person);
+			document.getElementById("string").innerHTML = "<h3> This is how nested objects display with JSON.stringify()</h3>" + newString + "<br>";
+			document.getElementById("norm-string").innerHTML = "<h3> This is how normal objects display with JSON.stringify()</h3>" + newPerson + "<br>";
+			
+			let x = new Date();
+			let y = JSON.stringify(x);
+			//document.getElementById("date").innerHTML = x + "<br>" + y + "<br>" + z;
+			
+			const normal = [1, "town", true, 2.76];
+			let details = JSON.stringify(SecondArray);
+			document.getElementById("date").innerHTML = details;
+		</script>
+	</body>
+</html>

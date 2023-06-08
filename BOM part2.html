@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript BOM</title>
+	</head>
+
+	<body>
+		<p id="demo"> </p>
+		<p id="demolo"> </p>
+		<p id="demi"> </p>
+		<button id="test" onclick="OpenDoc()">Load New Document</button>
+		<button id="test" onclick="HistoryForward()">Go Forward</button>
+		<!-- <button id="test" onclick="linkDoc()">Open Go Back File</button> -->
+		<script>
+			//Testing the Window object
+			let w = document.getElementById("test");
+			let x = document.getElementById("demo");
+			let y = document.getElementById("demolo");
+			let z = document.getElementById("demi");
+			
+			x.innerHTML = "Full Page URL is: <br>" + location.href;
+			//y.innerHTML = "Page Hostname is: <br>" + window.location.hostname;
+			y.innerHTML = "Page Pathname is: <br>" + location.pathname;
+			z.innerHTML = "Page Protocol is: <br>" + location.protocol;
+			z.innerHTML = "Host Port is: <br>" + location.port;
+			
+			x.innerHTML = "Are Cookies Enabled? " + navigator.cookieEnabled;
+			y.innerHTML = "Browser is Online: " + navigator.onLine;
+			//z.innerHTML = "Browser Platform is: " + navigator.language;
+			z.innerHTML = "Java Enabled?: " + navigator.javaEnabled();
+			
+			let t = navigator.cookieEnabled;
+			
+			if (t == true) {
+				x.style.backgroundColor = "red";
+			}
+			
+			
+			function newDoc() {
+				location.assign("https://w3schools.com/");
+			}
+			
+			/* function linkDoc() {
+				//window.open("00GoBack.html", width=100, height=100);
+				location.assign("00GoBack.html");
+			} */
+			
+			function OpenDoc() {
+				window.open("00GoBack.html", "_self", width=100, height=100);
+			}
+			
+			function HistoryForward() {
+				window.history.forward();
+			}
+		</script>
+	</body>
+
+</html>

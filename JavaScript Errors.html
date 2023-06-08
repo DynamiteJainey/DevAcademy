@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JavaScript Error Object</title>
+	</head>
+	<body>
+		<h1>JavaScript Error Object</h1>
+		
+		<p id="text"></p>
+		
+		<input id="input" type="text"><button onclick="tester()">Test My Input</button>
+		<p id="demo" style="color:red"></p>
+		<input type="number" min="3" max="15">
+		<p id="test"></p>
+		<script>
+			let x = document.getElementById("demo");
+			let y = document.getElementById("text");
+			let z = document.getElementById("test");
+			
+			// try except else finally -- PYTHON
+			// try catch finally throw -- JavaScript
+			try {
+				// Block of code to test
+				addlert("Yolo");
+			}
+			catch(aor) {
+				// Block of code to handle errors
+				x.innerHTML = aor.name;
+			}
+			finally {
+				// Block of code to be executed regardless of try/catch result
+				y.innerHTML = "This is the end";
+			}
+			
+			function tester() {
+				const info = x;
+				info.innerHTML = "";
+				let value = document.getElementById("input").value;
+				try {
+					//const obj = {messages:["Your face", 123, true, "Yawa"]};
+					const errors = ["empty", "not a number", "too low", "PERFECT", "too high"];
+					if (value == "") throw errors[0];
+					if (isNaN(value)) throw errors[1];
+					if (value <= 2) throw errors[2];
+					
+					if (value > 10) throw errors[4];
+					if (2 < value <=10) throw errors[3];
+				}
+				catch (err) {
+					info.innerHTML = err + ". TRY AGAIN!";
+				}
+				finally {
+					document.getElementById("input").value = "";
+				}
+			}
+			
+			// RangeError Example
+			try {
+				let number = 12;
+				let UV = number.toPrecision(101);
+				z.innerHTML = UV;
+			}
+			catch(err){
+				z.innerHTML = err.message;
+			}
+
+			// ReferenceError Example
+			try {
+				let a = 1;
+				// let b = 3;
+				a += b;
+				z.innerHTML = a;
+			}
+			catch(omoh) {
+				z.innerHTML = omoh.message;
+			}
+			
+			// SyntaxError Example
+			try {
+				eval("alert('Hello)");
+			}
+			catch (error) {
+				z.innerHTML = error.message;
+			}
+			
+			// TypeError Example
+			try {
+				let display = 12;
+				let convert = display.toUpperCase();
+				z.innerHTML = convert;
+			}
+			catch (vari){
+				z.innerHTML = vari.message;
+			}
+			
+			/*//URIError Example
+			try {
+				decodeURI("%%%%%");
+			}
+			catch (err) {
+				z.innerHTML = err.name;
+			} */
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>JavaScript Typecasting</title>
+		<style>
+		   body {
+			  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		   }
+		   .result,.sample {
+			  font-size: 20px;
+			  font-weight: 500;
+		   }
+		</style>
+	</head>
+	<body>
+		<h1>Type casting in JavaScript.</h1>
+		<div class="sample">44</div>
+		<div style="color: green;" class="result"></div>
+		<button class="Btn">CLICK HERE</button>
+		<h3>Click on the above button to convert it into string,number and boolean.</h3>
+		<script>
+		   let sampleEle = document.querySelector('.sample');
+		   let resEle = document.querySelector(".result");
+		   document.querySelector(".Btn").addEventListener("click", () => {
+			  resEle.innerHTML += 'String = '+ (String(sampleEle.innerHTML)+22) + '<br>';
+			  resEle.innerHTML += 'Number = ' + (Number(sampleEle.innerHTML)+22) + '<br>';
+			  resEle.innerHTML += 'Boolean = ' + Boolean(sampleEle.innerHTML) + '<br>';
+		   });
+		</script>
+	</body>
+</html>

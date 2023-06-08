@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Tag Name.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+
+<p id="demo"></p>
+<br>
+
+<div id="main">
+<p>Finding HTML Elements within another Element by Tag Name</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+</div>
+
+<p id="demo1"></p>
+<br>
+
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+<p id="demo2"></p>
+
+<p id="demo3"></p>
+
+<script>
+const element = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+
+document.getElementById("demo1").innerHTML = 
+'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+const z = document.getElementsByClassName("intro");
+document.getElementById("demo2").innerHTML = 
+'The first paragraph (index 0) with class="intro" is: ' + z[0].innerHTML;
+
+const t = document.querySelectorAll("p.intro");
+document.getElementById("demo3").innerHTML = 
+'The first paragraph (index 1) with class="intro" is: ' + t[1].innerHTML;
+</script>
+
+</body>
+</html>

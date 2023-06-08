@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+
+		<p id="demo"></p>
+		<p id="dem"></p>
+		<p id="deo"></p>
+
+		<script>
+			// Creating the prototype
+			const jobs = {
+			  greet: function() {
+				document.write("hello!  ");
+			  },
+			  depart() {
+				document.write("It's time to go.  ");
+			  },
+			  name:"Greetings"
+			};
+			
+			/*const carl = {
+			  greet: function() {
+				document.write("hello!  ");
+			  },
+			  depart() {
+				document.write("It's time to go.  ");
+			  },
+			  name:"Greetings"
+			};*/
+			
+			
+			// Creating Obects with existing Protype Using Object.create();
+			const carl = Object.create(jobs);
+			
+			document.getElementById("demo").innerHTML = carl.greet();
+			document.getElementById("dem").innerHTML = jobs.greet();
+		</script>
+
+	</body>
+</html>

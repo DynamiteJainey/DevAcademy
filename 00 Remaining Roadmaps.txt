@@ -1,0 +1,65 @@
+Beginner JavaScript [ IN PROGRESS ]
+Asynchronous JavaScript (setTimeout, setInterval) [DONE]
+JSON.parse  [ DONE ]
+JS Regular Expressions  [ DONE ]
+Number Methods and Properties [ DONE ]
+
+
+Error [ DONE ]
+Object 
+-- JavaScript OOPs (encapsulation, polymorphism, abstraction)   [ DONE ]
+
+JS JSON (in detail) [ DONE]
+
+
+
+Intermediate JavaScript
+-- Asynchronous JavaScript (callbacks, promises, async, await) [DONE]
+
+-- Asynchronous JavaScript (event loops)
+-- JS Arrow Functions [ DONE ]
+-- Modules in JavaScript (CommonJS, ECMAScript Modules) [ DONE ]
+
+-- Classes (mixins, protected methods, extending built-in classes) [DONE]
+
+-- Strict Mode [DONE]
+-- Using "this" keyword (explicit binding, function borrowing) [DONE]
+
+-- Working with APIs (JSON, Fetch, XMLHTTPRequest) [DONE]
+-- Using "this" keyword (generic) [DONE]
+-- Classes (extends, super, static) [DONE]
+
+-- Using Chrome Dev Tools (debugging issues) [DONE]
+
+
+
+-- JS Graphics & Canvas
+-- Data Structures
+-- Indexed Collections vs. Keyed Collections
+-- Maps & Weak Maps
+-- Sets & Weak Sets
+-- Operators (Bitwise, BigInt, Relational)
+-- Functions (IIFEs, Scope & Function Stack, arguments object)
+
+
+
+*Responsive & Adaptive Design for Mobile and Web Development*
+
+-- https://www.youtube.com/watch?v=VQraviuwbzU
+-- https://www.w3schools.com/css/css_rwd_intro.asp
+-- https://web.dev/learn/design/
+-- https://kinsta.com/blog/responsive-web-design/
+-- https://webflow.com/blog/responsive-web-design
+-- https://www.youtube.com/watch?v=srvUrASNj0s
+
+
+
+
+
+
+Advanced JavaScript
+-- Typed Array
+-- Equality Algorithms (isLooselyEqual, isStrictlyEqual, SameValueZero, SameValue)
+-- Iterators and Generators
+-- Memory Management (memory lifecycle, garbage collection)
+-- Using Chrome Dev Tools (debugging memory leaks, debugging performance)
