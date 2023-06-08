@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Additions App</title>
+    <link rel="stylesheet" type="text/css" href="input.css">
+    <script defer src="main.dart.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 id="title">Welcome to Three Additions</h1>
+        <p id="subtitle">This is Fun Way to Do Any Three Additons You Want With the <strong>Click of a Button!</strong> Are You Excited?</p>
+        <form>
+            <label><strong>First Set Your Parameters:</strong></label><br><br>
+            <input class="choices" id="first" type="number" placeholder="First Addition">
+            <input class="choices" id="second" type="number" placeholder="Second Addition">
+            <input class="choices" id="third" type="number" placeholder="Third Addition"><br><br><br>
+            <label><strong>How May Times Should We Make the Additions:</strong></label><br><br>
+            <select id="ranges" name="ranges" onchange="Display()">
+                <option value="decide">Decide Addition Range</option>
+                <option value="loopNumber">Set by Number of Loops</option>
+                <option value="maxTotal">Set by Max Total</option>
+              </select>
+            <input id="loop" type="number" placeholder="Number of Loops">
+            <input id="total" type="number" placeholder="Total You're Aiming For"><br><br>
+            <label class="myNumber"><strong>Finally, What's Your Starting Number?</strong></label><br><br>
+            <input id="myNumber" type="number" placeholder="input a number"><br><br>
+            <input id="start" type="button" value="Begin" onclick="Display()">
+            <input id="reset" type="button" value="Restart">
+            <p id="results"></p>
+            <div id="to-do">
+              <ul id="to-do-list"></ul>
+            </div>
+            
+        </form>
+        
+    </div>
+</body>
+</html>

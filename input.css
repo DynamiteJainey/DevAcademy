@@ -1,0 +1,72 @@
+body {
+    color: black;
+}
+#app {
+    background-color: aliceblue;
+    width: 700px;
+    height: fit-content;
+    margin: auto;
+    padding: 50px;
+    border-radius: 30px;
+    font-family: sans-serif;
+}
+
+#title, #subtitle {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+label {
+    float: left;
+}
+
+#reset, #start {
+    border-radius: 20px;
+    width: 200px;
+    height: 60px;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border: none;
+    margin-right: 20px;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+}
+
+#start {
+    background-color: blue;
+}
+
+#reset {
+    background-color: red;
+}
+
+.choices, #loop, #total, #ranges {
+    width: 200px;
+    height: 50px;
+    margin-right: 5px;
+    float: inherit;
+    border-radius: 12px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+#loop, #total {
+    display: inline;
+}
+
+#to-do {
+  background-color: white;
+  color:black;
+}
+
+#to-do-list {
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+}
+
+#to-do-list li {
+  padding: 5px 0px 5px 5px;
+  border-bottom: 1px dotted Silver;
+}
